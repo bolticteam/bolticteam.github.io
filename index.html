@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Boltic — FTC Robotics</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ========== HEADER ========== -->
+<header>
+  <nav class="nav">
+    <div class="brand" data-nav="home" aria-label="Boltic home">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z" fill="#fff"/>
+      </svg>
+      <div>
+        <div class="name">Boltic</div>
+        <div class="tag">FTC Robotics</div>
+      </div>
+    </div>
+    <div class="links" id="links">
+      <button data-nav="home" class="active">Boltic</button>
+      <button data-nav="awards">Awards</button>
+      <button data-nav="guides">Guides</button>
+      <button data-nav="impact">Impact</button>
+      <button data-nav="contact">Contact</button>
+    </div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<main>
+
+<!-- ========== HOME ========== -->
+<div class="page active" id="home">
+  <div class="hero">
+    <div class="hero-bg"><div class="scan"></div></div>
+    <div class="wrap hero-inner">
+      <span class="eyebrow">FIRST Tech Challenge // Team Boltic</span>
+      <h1>BOL<span class="bolt-word">T</span>IC</h1>
+      <p class="sub">A student robotics team designing, building, and competing in the FIRST Tech Challenge. Engineered with precision. Driven by the next bolt of momentum.</p>
+      <div class="meta">
+        <span>SEASON <b>2025–26</b></span>
+        <span>TEAM <b>#0000</b></span>
+        <span>STATUS <b>COMPETING</b></span>
+      </div>
+      <div class="btn-row">
+        <button class="btn" data-nav="awards">See our awards</button>
+        <button class="btn ghost" data-nav="contact">Sponsor the team</button>
+      </div>
+    </div>
+    <div class="scrollcue">SCROLL<span class="arrow">▼</span></div>
+  </div>
+
+  <!-- ABOUT -->
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Who we are</span>
+        <h2>About Boltic</h2>
+      </div>
+      <div class="about">
+        <div class="about-lead">
+          We're a student-led <span class="bolt-word">FTC</span> team turning sketches into machines, and rookies into engineers.
+        </div>
+        <div class="about-body">
+          <p>Boltic is a FIRST Tech Challenge team that designs, builds, and programs a competition robot from scratch every season. We do our own CAD, machining, wiring, and code, and we document the whole process the way real engineers do.</p>
+          <p>Beyond the robot, we run on gracious professionalism: we help other teams, share what we learn, and bring more students into STEM through outreach. Add a sentence here about how your team started and what you stand for.</p>
+          <div class="ftc-callout">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            <div>
+              <div class="k">What is FTC?</div>
+              <p>FIRST Tech Challenge puts students in grades 7–12 on teams that design, build, and program a robot to compete in a new game each year, while learning engineering, teamwork, and gracious professionalism.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THIS SEASON + ROBOT -->
+  <section class="flush">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">2025–26 Season</span>
+        <h2>This Season:<br>[ Game Name ]</h2>
+        <p>Each season FIRST releases a new game. Drop in this year's game name and a short description of the challenge, then show off the robot you built to take it on.</p>
+      </div>
+      <div class="robot">
+        <div class="ph ticked">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="6" y="8" width="12" height="10" rx="1"/><path d="M9 8V5h6v3M9 18v2M15 18v2M3 12h3M18 12h3"/></svg>
+          <span class="mono">Robot Photo</span>
+        </div>
+        <div class="specs">
+          <div class="specs-head">// Robot Spec Sheet</div>
+          <div class="spec-row"><span class="k">Drivetrain</span><span class="v">Mecanum / 4WD</span></div>
+          <div class="spec-row"><span class="k">Scoring Mech</span><span class="v">Linear slide + claw</span></div>
+          <div class="spec-row"><span class="k">Intake</span><span class="v">Active roller</span></div>
+          <div class="spec-row"><span class="k">Autonomous</span><span class="v">Vision + dead reckoning</span></div>
+          <div class="spec-row"><span class="k">Control System</span><span class="v">REV Control Hub</span></div>
+          <div class="spec-row"><span class="k">Build Material</span><span class="v">Aluminum + 3D print</span></div>
+        </div>
+      </div>
+      <p class="edit-note">// Edit these specs to match your actual robot</p>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="flush">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">By the numbers</span>
+        <h2>The Season<br>In Figures</h2>
+      </div>
+      <div class="stats ticked">
+        <div class="stat"><div class="num"><em>02</em></div><div class="lbl">Awards Won</div></div>
+        <div class="stat"><div class="num">2</div><div class="lbl">Seasons Active</div></div>
+        <div class="stat"><div class="num">00</div><div class="lbl">People Reached</div></div>
+        <div class="stat"><div class="num">00</div><div class="lbl">Team Members</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEASON JOURNEY -->
+  <section class="flush">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">How a season runs</span>
+        <h2>Our Journey</h2>
+        <p>From kickoff to championship, here's the path we walk every year. Swap in your real dates and results.</p>
+      </div>
+      <div class="timeline ticked">
+        <div class="tl"><div class="dot"></div><div class="date">Sep</div><h4>Kickoff</h4><p>The new game drops. We brainstorm strategy and sketch our first designs.</p></div>
+        <div class="tl"><div class="dot"></div><div class="date">Oct–Dec</div><h4>Build Season</h4><p>CAD, prototype, machine, wire, and code. The robot comes to life.</p></div>
+        <div class="tl"><div class="dot"></div><div class="date">Jan–Feb</div><h4>Qualifiers</h4><p>We compete, iterate between matches, and refine for the next event.</p></div>
+        <div class="tl"><div class="dot"></div><div class="date">Mar+</div><h4>Championship</h4><p>The teams that advance compete for regional and world titles.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MEET THE TEAM -->
+  <section class="flush">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">How we're built</span>
+        <h2>Meet the Team</h2>
+        <p>Every robot is the work of several subteams pulling in the same direction.</p>
+      </div>
+      <div class="subteams">
+        <div class="subteam">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4l-6 6 1.4 1.4 6-6a4 4 0 0 0 5.4-5.4l-2 2-1.4-1.4 2-2Z"/></svg>
+          <h4>Build &amp; Mechanical</h4>
+          <p>Designs, machines, and assembles the robot's structure and mechanisms.</p>
+        </div>
+        <div class="subteam">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m8 6-4 6 4 6M16 6l4 6-4 6"/></svg>
+          <h4>Programming</h4>
+          <p>Writes the autonomous routines, driver controls, and vision code.</p>
+        </div>
+        <div class="subteam">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M8 4v5"/></svg>
+          <h4>CAD &amp; Design</h4>
+          <p>Models every part in CAD so the build team can fabricate with precision.</p>
+        </div>
+        <div class="subteam">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
+          <h4>Outreach</h4>
+          <p>Runs demos, mentors younger teams, and grows STEM in the community.</p>
+        </div>
+        <div class="subteam">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h6"/></svg>
+          <h4>Business &amp; Media</h4>
+          <p>Handles sponsorship, the engineering notebook, and our online presence.</p>
+        </div>
+        <div class="subteam">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v4M12 18v4M4 12H2M22 12h-2M5 5l1.5 1.5M17.5 17.5 19 19M5 19l1.5-1.5M17.5 6.5 19 5"/><circle cx="12" cy="12" r="4"/></svg>
+          <h4>Drive Team</h4>
+          <p>Operates the robot in matches and calls strategy on the field.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPONSORSHIP -->
+  <section class="flush">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Partner with us</span>
+        <h2>Sponsor Boltic</h2>
+        <p>FTC teams run entirely on community support. Your sponsorship buys parts, tools, and registration, and puts real engineering experience in students' hands.</p>
+      </div>
+
+      <div class="why-grid">
+        <div class="why">
+          <div class="n">01</div>
+          <h4>Build engineers</h4>
+          <p>Every dollar goes straight into students learning CAD, machining, and code through hands-on work.</p>
+        </div>
+        <div class="why">
+          <div class="n">02</div>
+          <h4>Reach the community</h4>
+          <p>Your logo rides on our robot, banner, shirts, and socials, and appears at every event and demo we run.</p>
+        </div>
+        <div class="why">
+          <div class="n">03</div>
+          <h4>Invest locally</h4>
+          <p>Support is often tax-deductible and stays in your community. Confirm your team's exact status here.</p>
+        </div>
+      </div>
+
+      <div class="tiers">
+        <div class="tier">
+          <div class="t-name">Spark</div>
+          <div class="t-amt">$100+</div>
+          <ul>
+            <li>Logo on our team website</li>
+            <li>Thank-you on social media</li>
+            <li>Season update email</li>
+          </ul>
+        </div>
+        <div class="tier feature">
+          <div class="t-name">Surge</div>
+          <div class="t-amt">$500+</div>
+          <ul>
+            <li>Everything in Spark</li>
+            <li>Logo on team shirts</li>
+            <li>Logo on competition banner</li>
+            <li>Invite to a team demo</li>
+          </ul>
+        </div>
+        <div class="tier">
+          <div class="t-name">Lightning</div>
+          <div class="t-amt">$1,000+</div>
+          <ul>
+            <li>Everything in Surge</li>
+            <li>Prime logo placement on the robot</li>
+            <li>Named season sponsor</li>
+            <li>Feature in our engineering notebook</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="spons-cta">
+        <div>
+          <h3>Ready to power the build?</h3>
+          <p>Reach out and we'll send our full sponsorship packet. Custom partnerships welcome.</p>
+        </div>
+        <button class="btn" data-nav="contact">Become a sponsor</button>
+      </div>
+
+      <div class="logo-wall-label">// Current sponsors</div>
+      <div class="sponsor-grid">
+        <div class="sponsor-slot">Logo Slot</div>
+        <div class="sponsor-slot">Logo Slot</div>
+        <div class="sponsor-slot">Logo Slot</div>
+        <div class="sponsor-slot">Logo Slot</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="flush">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">From the pit</span>
+        <h2>Gallery</h2>
+      </div>
+      <div class="gallery">
+        <div class="ph tall">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-5-5L5 21"/></svg>
+          <span class="mono">Photo</span>
+        </div>
+        <div class="ph"><span class="mono">Photo</span></div>
+        <div class="ph"><span class="mono">Photo</span></div>
+        <div class="ph"><span class="mono">Photo</span></div>
+        <div class="ph"><span class="mono">Photo</span></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ========== AWARDS ========== -->
+<div class="page" id="awards">
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Recognition</span>
+        <h2>Awards</h2>
+        <p>Every banner tells a story about how we design, document, and show up. Here is what the judges have recognized.</p>
+      </div>
+
+      <div class="award-stats ticked">
+        <div class="as"><div class="num"><em>02</em></div><div class="lbl">Awards Won</div></div>
+        <div class="as"><div class="num">2</div><div class="lbl">Seasons Competing</div></div>
+        <div class="as"><div class="num">2025</div><div class="lbl">First Banner</div></div>
+      </div>
+
+      <!-- 2026 Design Award: team picture + robot photo -->
+      <div class="award ticked">
+        <div class="imgs two">
+          <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span class="mono">Team Photo</span></div>
+          <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="6" y="8" width="12" height="10" rx="1"/><path d="M9 8V5h6v3M9 18v2M15 18v2"/></svg><span class="mono">Robot Photo</span></div>
+        </div>
+        <div class="body">
+          <span class="yr">2026</span>
+          <h3>Design Award</h3>
+          <p>Recognizing thoughtful engineering, a clear design process, and a robot built with intention. Add a sentence or two on what earned it.</p>
+          <span class="seal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M8.2 13 7 22l5-3 5 3-1.2-9"/></svg> Judged Award</span>
+        </div>
+      </div>
+
+      <!-- 2025 Judge's Choice: team picture only -->
+      <div class="award ticked">
+        <div class="imgs">
+          <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span class="mono">Team Photo</span></div>
+        </div>
+        <div class="body">
+          <span class="yr">2025</span>
+          <h3>Judge's Choice Award</h3>
+          <p>The award judges give to a team whose story stood out beyond the rubric. Add the moment or quality that earned this one.</p>
+          <span class="seal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M8.2 13 7 22l5-3 5 3-1.2-9"/></svg> Judged Award</span>
+        </div>
+      </div>
+
+      <div class="block-label spaced">Full awards history</div>
+      <div class="award-history">
+        <div class="ah-row">
+          <span class="ah-year">2026</span>
+          <span class="ah-name">Design Award</span>
+          <span class="ah-event">League Qualifier</span>
+        </div>
+        <div class="ah-row">
+          <span class="ah-year">2025</span>
+          <span class="ah-name">Judge's Choice Award</span>
+          <span class="ah-event">League Qualifier</span>
+        </div>
+      </div>
+      <p class="edit-note">// Add a row here each time you earn a new award</p>
+    </div>
+  </section>
+</div>
+
+<!-- ========== GUIDES ========== -->
+<div class="page" id="guides">
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Learn with us</span>
+        <h2>Guides &amp;<br>Resources</h2>
+        <p>Build logs, tutorials, and resources we share with the community. New videos and docs land here as we publish them.</p>
+      </div>
+
+      <!-- Featured: Engineering Notebook -->
+      <div class="featured ticked">
+        <div class="ph">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 4h13a2 2 0 0 1 2 2v14H6a2 2 0 0 1-2-2z"/><path d="M8 4v16M11 9h5M11 13h5"/></svg>
+          <span class="mono">Notebook Cover</span>
+        </div>
+        <div class="f-body">
+          <span class="f-kick">Start here</span>
+          <h3>Engineering Notebook</h3>
+          <p>Our full record of the season: the design process, decisions, tests, and iterations behind the robot. The best single window into how Boltic works.</p>
+          <a class="btn" href="#" target="_blank" rel="noopener">View the notebook</a>
+        </div>
+      </div>
+
+      <div class="block-label">Build series &amp; videos</div>
+      <div class="card-grid">
+        <div class="card">
+          <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m10 9 5 3-5 3V9Z"/><rect x="2" y="4" width="20" height="16" rx="3"/></svg><span class="mono">YouTube</span></div>
+          <div class="c-body"><span class="kicker">Video</span><h4>Build Series Ep. 01</h4><p>Swap in a YouTube embed or thumbnail link once the episode is live.</p></div>
+        </div>
+        <div class="card">
+          <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m10 9 5 3-5 3V9Z"/><rect x="2" y="4" width="20" height="16" rx="3"/></svg><span class="mono">YouTube</span></div>
+          <div class="c-body"><span class="kicker">Video</span><h4>CAD Walkthrough</h4><p>A short title and description for each upload keeps the page useful.</p></div>
+        </div>
+        <div class="card">
+          <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m10 9 5 3-5 3V9Z"/><rect x="2" y="4" width="20" height="16" rx="3"/></svg><span class="mono">YouTube</span></div>
+          <div class="c-body"><span class="kicker">Video</span><h4>Match Highlights</h4><p>Drop in season recaps, reveals, or autonomous runs as you film them.</p></div>
+        </div>
+      </div>
+
+      <div class="block-label spaced">Downloads &amp; resources</div>
+      <div class="res-list">
+        <a class="res-row" href="#" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M8 4v5"/></svg>
+          <span class="r-name">Robot CAD Files</span><span class="r-type">Onshape</span>
+          <svg class="r-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg>
+        </a>
+        <a class="res-row" href="#" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m8 6-4 6 4 6M16 6l4 6-4 6"/></svg>
+          <span class="r-name">Robot Code Repository</span><span class="r-type">GitHub</span>
+          <svg class="r-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg>
+        </a>
+        <a class="res-row" href="#" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
+          <span class="r-name">Engineering Notebook (PDF)</span><span class="r-type">PDF</span>
+          <svg class="r-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg>
+        </a>
+        <a class="res-row" href="#" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          <span class="r-name">New Team Starter Guide</span><span class="r-type">Guide</span>
+          <svg class="r-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg>
+        </a>
+      </div>
+
+      <div class="note"><b>Keep this updated.</b> Add a card or a resource row each time you upload a video or publish a doc. Replace the <span class="mono">#</span> links with your real URLs.</div>
+    </div>
+  </section>
+</div>
+
+<!-- ========== IMPACT ========== -->
+<div class="page" id="impact">
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">In the community</span>
+        <h2>Impact</h2>
+        <p>Robots are only half of what we do. We work to grow STEM in our community and help the teams coming up behind us.</p>
+      </div>
+
+      <div class="impact-top">
+        <div class="stats inline">
+          <div class="stat"><div class="num">00</div><div class="lbl">Outreach Events</div></div>
+          <div class="stat"><div class="num"><em>00</em></div><div class="lbl">People Reached</div></div>
+          <div class="stat"><div class="num">00</div><div class="lbl">Hours Volunteered</div></div>
+        </div>
+        <div class="socials">
+          <a class="soc" href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a class="soc" href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 5 3-5 3V9Z" fill="currentColor" stroke="none"/></svg></a>
+          <a class="soc" href="#" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h3l-7 8 8 12h-6l-5-7-5 7H-1l8-9L-1 2h6l4 6 5-6Z" transform="translate(3 0)"/></svg></a>
+        </div>
+      </div>
+
+      <div class="block-label">What we do</div>
+      <div class="subteams">
+        <div class="subteam">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/></svg>
+          <h4>School Demos</h4>
+          <p>We bring the robot into classrooms to show younger students what robotics looks like up close.</p>
+        </div>
+        <div class="subteam">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0 1 12 0M16 6l2 2 4-4"/></svg>
+          <h4>Mentoring Teams</h4>
+          <p>We help newer FTC and FLL teams with build, code, and strategy so the whole region gets stronger.</p>
+        </div>
+        <div class="subteam">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 7a4 4 0 1 0 0 .01M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <h4>Community Events</h4>
+          <p>Fairs, libraries, and town events: we set up, demo, and talk robotics with anyone curious.</p>
+        </div>
+        <div class="subteam">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20V10M18 20V4M6 20v-6"/></svg>
+          <h4>STEM Workshops</h4>
+          <p>Hands-on sessions that get students building and coding instead of just watching.</p>
+        </div>
+        <div class="subteam">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h13a2 2 0 0 1 2 2v14H6a2 2 0 0 1-2-2z"/><path d="M8 4v16M11 9h5M11 13h5"/></svg>
+          <h4>Open Resources</h4>
+          <p>We publish guides, code, and CAD so other teams can learn from what we build.</p>
+        </div>
+        <div class="subteam">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8Z"/></svg>
+          <h4>Volunteering</h4>
+          <p>Team members give time at competitions and local STEM efforts beyond our own season.</p>
+        </div>
+      </div>
+
+      <div class="block-label spaced">Outreach log</div>
+      <div class="outreach">
+        <div class="event"><span class="idx">01</span><div><div class="ev-date">Date</div><h4>Event Name</h4><p>What you did, who you reached, and why it mattered. Add a new entry as you run more outreach.</p></div></div>
+        <div class="event"><span class="idx">02</span><div><div class="ev-date">Date</div><h4>Event Name</h4><p>Mentoring younger teams, demos at schools, community builds, anything that grew interest in STEM.</p></div></div>
+        <div class="event"><span class="idx">03</span><div><div class="ev-date">Date</div><h4>Event Name</h4><p>Keep stats and socials pinned at the top so visitors see your reach first.</p></div></div>
+        <div class="event"><span class="idx">04</span><div><div class="ev-date">Date</div><h4>Event Name</h4><p>Short, specific descriptions read better than long paragraphs here.</p></div></div>
+      </div>
+
+      <div class="spons-cta spaced">
+        <div>
+          <h3>Bring Boltic to your event</h3>
+          <p>Hosting a fair, classroom visit, or community day? We'd love to bring the robot and talk STEM.</p>
+        </div>
+        <button class="btn" data-nav="contact">Invite the team</button>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ========== CONTACT ========== -->
+<div class="page" id="contact">
+  <section>
+    <div class="wrap">
+      <div class="contact-grid">
+        <div class="contact-lead">
+          <span class="eyebrow">Get in touch</span>
+          <h2>LET'S<br>CONNEC<span class="bolt-word">T</span></h2>
+          <p>Sponsorship, mentoring, press, or just curious about the team? All inquiries reach us at the contacts on the right.</p>
+        </div>
+        <div class="contact-rows ticked">
+          <div class="crow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>
+            <div><div class="k">Email</div><a class="v" href="mailto:team@boltic.org">team@boltic.org</a></div>
+          </div>
+          <div class="crow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L20 13l5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>
+            <div><div class="k">Phone</div><a class="v" href="tel:+10000000000">(000) 000-0000</a></div>
+          </div>
+          <div class="crow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            <div><div class="k">Instagram</div><a class="v" href="#">@boltic</a></div>
+          </div>
+          <div class="crow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 5 3-5 3V9Z" fill="currentColor" stroke="none"/></svg>
+            <div><div class="k">YouTube</div><a class="v" href="#">Boltic Robotics</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+</main>
+
+<!-- ========== FOOTER ========== -->
+<footer>
+  <div class="foot">
+    <span>© 2026 Team <span class="bolt-word">Boltic</span> // FTC Robotics</span>
+    <span>Built for the build season</span>
+  </div>
+</footer>
+
+<script>
+  const pages = document.querySelectorAll('.page');
+  const navBtns = document.querySelectorAll('[data-nav]');
+  const linkBtns = document.querySelectorAll('#links button');
+  const links = document.getElementById('links');
+  const toggle = document.getElementById('menuToggle');
+
+  function go(id){
+    pages.forEach(p => p.classList.toggle('active', p.id === id));
+    linkBtns.forEach(b => b.classList.toggle('active', b.dataset.nav === id));
+    links.classList.remove('open');
+    toggle.setAttribute('aria-expanded','false');
+    window.scrollTo({top:0,behavior:'auto'});
+  }
+
+  navBtns.forEach(b => b.addEventListener('click', () => go(b.dataset.nav)));
+
+  toggle.addEventListener('click', () => {
+    const open = links.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+</script>
+</body>
+</html>
