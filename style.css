@@ -90,6 +90,7 @@ section{padding:5rem 0}
   text-transform:uppercase;letter-spacing:-.01em;margin-top:.8rem;
 }
 .section-head p{color:var(--gray);max-width:54ch;margin-top:1rem}
+#sponsorship .section-head p{max-width:100%}
 
 /* corner-tick framed box (signature) */
 .ticked{position:relative}
