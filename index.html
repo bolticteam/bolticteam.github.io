@@ -657,35 +657,32 @@
   if (sponsorsContainer && floatingLogo) {
     let posX = 50;
     let posY = 50;
-    let velX = 2;
-    let velY = 2;
-    const speed = 2;
+    let velX = 1;
+    let velY = 1;
     
     floatingLogo.style.left = posX + 'px';
     floatingLogo.style.top = posY + 'px';
     
     function animateLogo() {
-      const containerRect = sponsorsContainer.getBoundingClientRect();
-      const logoRect = floatingLogo.getBoundingClientRect();
+      const containerWidth = sponsorsContainer.offsetWidth;
+      const containerHeight = sponsorsContainer.offsetHeight;
+      const logoWidth = 200; // Fixed width from CSS
+      const logoHeight = 100; // Fixed height from CSS
       
       posX += velX;
       posY += velY;
       
-      // Check for collisions with walls
-      if (posX + logoRect.width >= containerRect.width) {
-        posX = containerRect.width - logoRect.width;
+      // Check for collisions with walls - just reverse velocity
+      if (posX + logoWidth >= containerWidth || posX <= 0) {
         velX = -velX;
-      } else if (posX <= 0) {
-        posX = 0;
-        velX = -velX;
+        // Keep logo within bounds
+        posX = Math.max(0, Math.min(posX, containerWidth - logoWidth));
       }
       
-      if (posY + logoRect.height >= containerRect.height) {
-        posY = containerRect.height - logoRect.height;
+      if (posY + logoHeight >= containerHeight || posY <= 0) {
         velY = -velY;
-      } else if (posY <= 0) {
-        posY = 0;
-        velY = -velY;
+        // Keep logo within bounds
+        posY = Math.max(0, Math.min(posY, containerHeight - logoHeight));
       }
       
       floatingLogo.style.left = posX + 'px';
