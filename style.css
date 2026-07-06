@@ -57,7 +57,7 @@ header{
 .brand .brand-logo{width:80px;height:80px;flex:none;filter:drop-shadow(0 0 0 black) drop-shadow(0 0 0 black)}
 .brand .name{
   font-family:'Archivo',sans-serif;font-weight:900;
-  font-size:1.45rem;letter-spacing:.04em;line-height:1;
+  font-size:2rem;letter-spacing:.04em;line-height:1;
   color:var(--white);text-transform:uppercase;
 }
 .brand .tag{
@@ -205,7 +205,7 @@ section{padding:5rem 0}
 }
 .sponsor-logo img{
   max-width:100%;
-  max-height:100%;
+  max-height:300px;
   object-fit:contain;
 }
 
@@ -483,6 +483,9 @@ footer{
 }
 .member-headshot img.adjust-top{
   object-position:center 5%;
+}
+.member-headshot img.black-bg{
+  background-color:black;
 }
 .member-headshot svg{
   width:32px;height:32px;color:var(--gray-dim);
