@@ -348,8 +348,8 @@
             <span class="eyebrow">Our supporters</span>
             <h3>Current Sponsors</h3>
           </div>
-          <div class="sponsors-container">
-            <div class="sponsor-logo floating-logo">
+          <div class="sponsors-container" id="sponsorsContainer">
+            <div class="sponsor-logo" id="floatingLogo">
               <img src="assets/img/Capgemini_Logo-removebg-preview.png" alt="Capgemini">
             </div>
           </div>
@@ -649,6 +649,53 @@
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closeModal();
   });
+
+  // DVD Screensaver-style bouncing logo
+  const sponsorsContainer = document.getElementById('sponsorsContainer');
+  const floatingLogo = document.getElementById('floatingLogo');
+  
+  if (sponsorsContainer && floatingLogo) {
+    let posX = 50;
+    let posY = 50;
+    let velX = 2;
+    let velY = 2;
+    const speed = 2;
+    
+    floatingLogo.style.left = posX + 'px';
+    floatingLogo.style.top = posY + 'px';
+    
+    function animateLogo() {
+      const containerRect = sponsorsContainer.getBoundingClientRect();
+      const logoRect = floatingLogo.getBoundingClientRect();
+      
+      posX += velX;
+      posY += velY;
+      
+      // Check for collisions with walls
+      if (posX + logoRect.width >= containerRect.width) {
+        posX = containerRect.width - logoRect.width;
+        velX = -velX;
+      } else if (posX <= 0) {
+        posX = 0;
+        velX = -velX;
+      }
+      
+      if (posY + logoRect.height >= containerRect.height) {
+        posY = containerRect.height - logoRect.height;
+        velY = -velY;
+      } else if (posY <= 0) {
+        posY = 0;
+        velY = -velY;
+      }
+      
+      floatingLogo.style.left = posX + 'px';
+      floatingLogo.style.top = posY + 'px';
+      
+      requestAnimationFrame(animateLogo);
+    }
+    
+    animateLogo();
+  }
 </script>
 </body>
 </html>
